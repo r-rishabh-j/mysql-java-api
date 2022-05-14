@@ -1,0 +1,122 @@
+<queries>
+    <sql id="findActor_AL" paramType="java.util.ArrayList">
+        <![CDATA[
+         select * from actor where actor_id=${actor_id} and first_name=${first_name} and last_name=${last_name};
+       ]]>
+    </sql>
+    <sql id="findActor_OA" paramType="[Ljava.lang.Object">
+        <![CDATA[
+         select * from actor where actor_id=${actor_id} and first_name=${first_name} and last_name=${last_name};
+       ]]>
+    </sql>
+    <sql id="findActor_O" paramType="org.cs305.assignment_1.POJO.actor">
+        <![CDATA[
+         select * from actor where actor_id=${actor_id} and first_name=${first_name} and last_name=${last_name};
+       ]]>
+    </sql>
+    <sql id="findActor_singleP" paramType="java.util.ArrayList">
+        <![CDATA[
+         select * from actor where first_name=${first_name};
+       ]]>
+    </sql>
+    <sql id="findActor_OT" paramType="org.cs305.assignment_1.POJO.actor">
+        <![CDATA[
+         select * from actor where actor_id=${actor_id} and first_name=${first_name} and last_name=${last_name} and last_update=${last_update};
+       ]]>
+    </sql>
+    <sql id="findActor_P" paramType="java.lang.Integer">
+        <![CDATA[
+         select * from actor where actor_id=${actor_id};
+       ]]>
+    </sql>
+    <sql id="findActor_nullParam" paramType="">
+        <![CDATA[
+         select * from actor where first_name='MICHAEL' and last_name='BOLGER';
+       ]]>
+    </sql>
+    <sql id="insertActor_AL" paramType="java.util.ArrayList">
+        <![CDATA[
+            INSERT INTO actor values(${1}, ${2}, ${3}, ${4});
+       ]]>
+    </sql>
+    <sql id="insertActor_O" paramType="org.cs305.assignment_1.POJO.setActor">
+        <![CDATA[
+            INSERT INTO actor values(${actor_id}, ${first_name}, ${last_name}, ${last_update});
+       ]]>
+    </sql>
+    <sql id="insertActor_I" paramType="incorrect_id_test">
+        <![CDATA[
+            INSERT INTO actor values(${actor_id}, ${first_name}, ${last_name}, ${last_update});
+       ]]>
+    </sql>
+    <sql id="insertActor_OA" paramType="[Ljava.lang.Object">
+        <![CDATA[
+            INSERT INTO actor values(${1}, ${2}, ${3}, ${4});
+       ]]>
+    </sql>
+    <sql id="insertActor" paramType="">
+        <![CDATA[
+            INSERT INTO actor values(500, 'INSERT_TEST', 'INSERT_TEST_', '2006-02-15 04:34:33');
+       ]]>
+    </sql>
+    <sql id="deleteActor" paramType="">
+        <![CDATA[
+            DELETE from actor where first_name=${name};
+       ]]>
+    </sql>
+    <sql id="deleteActor_O" paramType="org.cs305.assignment_1.POJO.setActor">
+        <![CDATA[
+            DELETE from actor where first_name=${first_name} and last_name=${last_name} and actor_id=${actor_id} and last_update=${last_update};
+       ]]>
+    </sql>
+    <sql id="deleteActor_OA" paramType="[Ljava.lang.Object">
+        <![CDATA[
+            DELETE from actor where actor_id=${actor_id} and first_name=${first_name} and last_name=${last_name} and last_update=${last_update};
+       ]]>
+    </sql>
+    <sql id="deleteActor_I" paramType="incorrect_test">
+        <![CDATA[
+            DELETE from actor where actor_id=${actor_id} and first_name=${first_name} and last_name=${last_name} and last_update=${last_update};
+       ]]>
+    </sql>
+    <sql id="deleteActor_OA1" paramType="org.cs305.assignment_1.POJO.setActor">
+        <![CDATA[
+            DELETE from actor where actor_id=${actor_id} and first_name=${first_name} and last_name=${last_name} and last_update=${last_update};
+       ]]>
+    </sql>
+    <sql id="deleteActor_AL" paramType="java.util.ArrayList">
+        <![CDATA[
+            DELETE from actor where actor_id=${actor_id} and first_name=${first_name} and last_name=${last_name} and last_update=${last_update};
+       ]]>
+    </sql>
+    <sql id="findMovies" paramType="">
+        <![CDATA[
+            select * from film;
+       ]]>
+    </sql>
+    <sql id="updateActor_O" paramType="org.cs305.assignment_1.POJO.setActor">
+        <![CDATA[
+            update actor set first_name=${set_first_name} where first_name=${first_name};
+       ]]>
+    </sql>
+    <sql id="updateActor_I" paramType="incorrect_id_test">
+        <![CDATA[
+            update actor set first_name=${set_first_name} where first_name=${first_name};
+       ]]>
+    </sql>
+    <sql id="updateActor_OA" paramType="[Ljava.lang.Object">
+        <![CDATA[
+            update actor set first_name=${set_first_name} where first_name=${first_name};
+       ]]>
+    </sql>
+    <sql id="updateActor_AL" paramType="java.util.ArrayList">
+        <![CDATA[
+            update actor set first_name=${set_first_name} where first_name=${first_name};
+       ]]>
+    </sql>
+    <sql id="updateActor" paramType="">
+        <![CDATA[
+            update actor set first_name='JOHN2' where first_name='JOHN';
+       ]]>
+    </sql>
+</queries>
