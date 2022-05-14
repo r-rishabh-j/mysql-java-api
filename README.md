@@ -1,7 +1,3 @@
-## Assignment 1
-Submitter: Rishabh Jain<br>
-Roll No: 2019csb1286
-
 ### Java MySQL API to execute CRUD operations.
 
 ### What does this program do?
@@ -32,9 +28,6 @@ implementation("mysql:mysql-connector-java:8.0.26")
 The relative path to library jar file has to be from the root folder of the application.
 4. Select an appropriate package name. It should NOT start with `java.lang`(which is anyway reserved for Java builtins). This would lead to unsupported behaviours.
 
-A sample application to run the library has already been created in `/run_assignment_1` directory with all the settings initialised.
-The `mainClass` is the `run_assignment_1.App.java` class in which code could be added to experiment with the library.
-
 ### C. Placement of `queries.xml` file
 Place the `queries.xml` file in the /app folder of the Java application in which the library has been imported.
 The path of the file can also be changed by calling appropriate API function mentioned below.
@@ -45,13 +38,8 @@ For a successful build, the unit tests need to be passed first. *Make sure that 
 in it's original state given in <a href="https://dev.mysql.com/doc/sakila/en">https://dev.mysql.com/doc/sakila/en/, otherwise unit tests might fail(output validation has been performed in the tests. Change in data will lead to change in output)*. It is recommended
 to set autoCommit to false while experimenting with the library. The same has been done in unit tests to avoid changes to data in database.
 1. Build the jar file of the library by going into the library folder `/MySQLlib` and running `gradle build`.
-2. Go into the `/run_assignment_1` example application folder and type `gradle build` and then `gradle run`.
-3. The code present in `/run_assignment_1/app/src/main/java/run_assignment_1/App.java` will be executed.
 
 ### E. Unit testing
-Important: Change the database url, root, and password in 
-`/run_assignment_1/app/src/main/java/run_assignment_1/App.java` to 
-suit your own configuration before running the tests.
 1. JUnit-Jupiter is used for unit testing of the code.
 2. Unit tests are present in the `/MySQLlib/src/main/test` directory.
 3. To execute tests, go into the `/MySQLlib` folder and execute `gradle test`
