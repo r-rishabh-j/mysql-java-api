@@ -1,5 +1,6 @@
 ### Java MySQL API to execute CRUD operations.
 
+
 ### What does this program do?
 This is a MySQL java API designed to execute CRUD operations. The queries are given in an XML file, from which they
 are read and executed.
@@ -46,3 +47,5 @@ to set autoCommit to false while experimenting with the library. The same has be
 
 ### F. API documentation
 Given in API_doc.pdf in the folder.
+  
+Note: This project was a part of the course CS305 @IIT Ropar
